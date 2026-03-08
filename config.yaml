@@ -1,0 +1,4 @@
+lenguaje: TypeScript
+linter: ESLint
+formatter: Prettier
+archivo_configuracion: .eslintrc.json

@@ -1,0 +1,44 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "rules": {
+    // ========================================
+    // REGLA PERSONALIZADA 1: Prohibir el uso de 'any'
+    // ========================================
+    // Nivel: error - Fuerza el uso de tipos específicos
+    "@typescript-eslint/no-explicit-any": "error",
+    
+    // ========================================
+    // REGLA PERSONALIZADA 2: Exigir punto y coma
+    // ========================================
+    // Nivel: error - Requiere punto y coma al final de cada declaración
+    "semi": ["error", "always"],
+    
+    // ========================================
+    // REGLA PERSONALIZADA 3: Exigir comillas simples
+    // ========================================
+    // Nivel: error - Estandariza el uso de comillas simples
+    "quotes": ["error", "single", { "avoidEscape": true }],
+    
+    // ========================================
+    // Reglas adicionales de calidad de código
+    // ========================================
+    // Exigir uso de === en lugar de ==
+    "eqeqeq": ["error", "always"]
+  }
+}
